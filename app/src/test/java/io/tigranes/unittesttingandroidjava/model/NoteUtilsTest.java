@@ -8,9 +8,9 @@ import utils.NoteUtils;
 public class NoteUtilsTest {
 
     @Test
-    public void twoNotesSameId() {
-        Note firstNote = new Note(1,"","","");
-        Note secondNote = new Note(1,"","","");
+    public void twoNotesSameIdDifferentFields() {
+        Note firstNote = new Note(1,"title","content","12:30 PM");
+        Note secondNote = new Note(1,"title_other","content_other","12:30 PM_other");
         boolean areEqual = NoteUtils.compareNotesById(firstNote, secondNote);
         Assertions.assertTrue(areEqual);
     }
